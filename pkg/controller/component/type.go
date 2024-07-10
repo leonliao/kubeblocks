@@ -47,7 +47,6 @@ type SynthesizedComponent struct {
 	TLSConfig            *v1alpha1.TLSConfig                    `json:"tlsConfig"`
 	ServiceAccountName   string                                 `json:"serviceAccountName,omitempty"`
 	// TODO: remove this later
-	ComponentRefEnvs       []corev1.EnvVar                        `json:"componentRefEnvs,omitempty"`
 	ServiceReferences      map[string]*v1alpha1.ServiceDescriptor `json:"serviceReferences,omitempty"`
 	UserDefinedLabels      map[string]string
 	UserDefinedAnnotations map[string]string
