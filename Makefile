@@ -164,6 +164,7 @@ test-go-generate: ## Run go generate against test code.
 .PHONY: fmt
 fmt: ## Run go fmt against code.
 	$(GOFMT) -l -w -s $$(git ls-files --exclude-standard | grep "\.go$$" | grep -v $(GENERATED_CLIENT_PKG))
+	$(GOFMT) -l -w -s $$(find ./pkg/testutil/ -name "*.go")
 
 .PHONY: vet
 vet: test-go-generate ## Run go vet against code.
